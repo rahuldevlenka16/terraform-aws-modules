@@ -26,7 +26,7 @@ Reusable VPC Terraform module that can create:
 
 ```hcl
 module "vpc" {
-  source = "github.com/rahuldevlenka16/terraform-modules//vpc?ref=v1.0.0"
+  source = "git::https://github.com/rahuldevlenka16/terraform-aws-modules.git//vpc?ref=master"
   cidr_block = "10.0.0.0/16"
   public_subnets = ["10.0.1.0/24", "10.0.2.0/24"]
   private_subnets = ["10.0.3.0/24", "10.0.4.0/24"]
