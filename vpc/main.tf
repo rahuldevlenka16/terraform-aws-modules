@@ -62,7 +62,7 @@ resource "aws_subnet" "private" {
 # -----------------------------
 resource "aws_eip" "nat" {
   count = var.create_nat ? 1 : 0
-  vpc   = true
+  domain   = "vpc"
   tags  = merge(var.tags, { Name = "${var.project}-${var.environment}-nat-eip" })
 }
 
